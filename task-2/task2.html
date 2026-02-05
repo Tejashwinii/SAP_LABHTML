@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Manager</h1>
+    <p>Elegant & simple student record system</p>
+</header>
+
+<main class="container">
+
+    <section class="glass">
+        <h2>Add Student</h2>
+
+        <div class="inputs">
+            <input type="text" id="name" placeholder="Student Name">
+            <input type="number" id="marks" placeholder="Marks (0–100)">
+            <button onclick="addStudent()">Add Student</button>
+        </div>
+
+        <p id="error"></p>
+    </section>
+
+    <section class="glass">
+        <h2>Student Records</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Student Manager</p>
+</footer>
+
+<script src="task2.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color:orange;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs, select, and file */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 15px;
+}
+
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+</style>
+
+</head>
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email"  placeholder="Enter you mail id" required><br><br>
+
+        <label for="number">Mobile Number</label>
+        <input type="tel" id="phone" required pattern="[0-9]{10}" placeholder="Enter your mobile number" required><br><br>
+
+        <label for="dob">DOB</label>
+        <input type="date" id="dob" required><br><br>
+
+        <label >Gender</label>
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="others">Others <br><br>
+
+        <label >Course</label>
+        <select name="course" required>
+            <option value="BCA">BCA</option>
+            <option value="B.Sc">B.Sc</option>
+            <option value="MCA">MCA</option>
+            <option value="M.Sc">M.Sc</option>
+        </select><br><br>
+
+        <label for="photo">Upload Photo</label>
+        <input type="file" id="photo" reqauired>   <br><br>
+        
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I AGREE TO THE ABOVE TERMS AND CONDITIONS</label><br><br>
+        
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

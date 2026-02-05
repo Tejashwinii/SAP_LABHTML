@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8f9fa;
+    color: #2d3436;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: #111;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+}
+
+header p {
+    margin-top: 8px;
+    color: #ccc;
+}
+
+/* Layout */
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Menu */
+.menu h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* Menu Card */
+.menu-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    padding: 15px 15px 5px;
+}
+
+.menu-card p {
+    padding: 0 15px;
+    color: #636e72;
+    font-size: 14px;
+}
+
+.menu-card span {
+    display: block;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.menu-card button {
+    margin: 0 15px;
+    width: calc(100% - 30px);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #111;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-card button:hover {
+    background: #333;
+}
+
+/* Cart */
+.cart {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    height: fit-content;
+}
+
+.cart h2 {
+    margin-bottom: 15px;
+}
+
+.cart ul {
+    list-style: none;
+}
+
+.cart li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #636e72;
+}

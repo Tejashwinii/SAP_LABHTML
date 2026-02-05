@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teju | Portfolio</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>Teju</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate Full Stack Developer with interest in building
+                responsive web applications using the MERN stack.
+                I enjoy learning new technologies and solving real-world problems.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article class="project">
+                <h3>Expense Tracker</h3>
+                <p>MERN stack application to track daily expenses with charts.</p>
+            </article>
+
+            <article class="project">
+                <h3>Books Directory App</h3>
+                <p>Node.js CLI app to add, remove, and read books.</p>
+            </article>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form id="contactForm">
+                <label>
+                    Name:
+                    <input type="text" id="name">
+                </label>
+
+                <label>
+                    Email:
+                    <input type="email" id="email">
+                </label>
+
+                <label>
+                    Message:
+                    <textarea id="message"></textarea>
+                </label>
+
+                <button type="submit">Send</button>
+                <p id="errorMsg"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Teju. All rights reserved.</p>
+    </footer>
+
+    <script src="task1.js"></script>
+</body>
+</html>

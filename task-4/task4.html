@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>La Bella Cucina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+
+<header>
+    <h1>La Bella Cucina</h1>
+    <p>Authentic Italian Experience</p>
+</header>
+
+<main class="container">
+
+    <!-- Menu Section -->
+    <section class="menu">
+        <h2>Our Menu</h2>
+
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.r6QNsFDrNL6nrOMhstm88gHaEO?pid=Api&P=0&h=180" alt="Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Classic cheese & basil</p>
+                <span>₹299</span>
+                <button onclick="addToCart('Margherita Pizza', 299)">Add to Cart</button>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2023-06-chicken-alfredo-pasta-reshoot%2Fchicken-alfredo-pasta-2-vertical" alt="Pasta">
+                <h3>Creamy Alfredo Pasta</h3>
+                <p>Rich & creamy delight</p>
+                <span>₹349</span>
+                <button onclick="addToCart('Alfredo Pasta', 349)">Add to Cart</button>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.UhOpOVEd-pNeXwfd9er6TAHaE8?pid=Api&P=0&h=180" alt="Burger">
+                <h3>Veg Supreme Burger</h3>
+                <p>Loaded with veggies</p>
+                <span>₹249</span>
+                <button onclick="addToCart('Veg Burger', 249)">Add to Cart</button>
+            </div>
+
+            <div class="menu-card">
+                <img src="http://www.prettydesigns.com/wp-content/uploads/2015/02/Molten-Lava-Cake.jpg" alt="Dessert">
+                <h3>Chocolate Lava Cake</h3>
+                <p>Warm & gooey</p>
+                <span>₹199</span>
+                <button onclick="addToCart('Lava Cake', 199)">Add to Cart</button>
+            </div>
+            <div class="menu-card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.26fykz8CYfF5XoMrKjDpZQHaE5?pid=Api&P=0&h=180" alt="wine">
+                <h3>Red wine </h3>
+                <p>Vintage sip of grapes</p>
+                <span>₹1099</span>
+                <button onclick="addToCart('Red Wine', 1099)">Add to Cart</button>
+            </div>
+            <div class="menu-card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.26fykz8CYfF5XoMrKjDpZQHaE5?pid=Api&P=0&h=180" alt="wine">
+                <h3></h3>
+                <p>Vintage sip of grapes</p>
+                <span>₹1099</span>
+                <button onclick="addToCart('Red Wine', 1099)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <aside class="cart">
+        <h2>Your Cart</h2>
+        <ul id="cartItems"></ul>
+        <hr>
+        <p class="total">Total: ₹<span id="totalAmount">0</span></p>
+    </aside>
+
+</main>
+
+<footer>
+    <p>© 2026 La Bella Cucina</p>
+</footer>
+
+<script src="task4.js"></script>
+</body>
+</html>

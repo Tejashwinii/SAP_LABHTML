@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task3.css">
+</head>
+<body>
+
+<main class="quiz-container">
+
+    <header>
+        <h1>Smart Quiz</h1>
+        <p>Test your knowledge</p>
+    </header>
+
+    <section id="quiz-box" class="card">
+        <h2 id="question">Question text</h2>
+
+        <div id="options" class="options">
+            <!-- Options inserted dynamically -->
+        </div>
+
+        <button id="nextBtn" onclick="nextQuestion()">Next</button>
+    </section>
+
+    <section id="result-box" class="card hidden">
+        <h2>Your Score</h2>
+        <p id="scoreText"></p>
+        <button onclick="restartQuiz()">Restart Quiz</button>
+    </section>
+
+</main>
+
+<script src="task3.js"></script>
+</body>
+</html>

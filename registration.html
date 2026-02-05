@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    form {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    input {
+      padding: 8px;
+      margin: 5px 0;
+      width: 100%;
+    }
+
+    button {
+      padding: 8px 12px;
+      background: #aa632a;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .message {
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    .success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background:#aa632a;
+      color: #fff;
+    }
+
+    .delete-btn {
+      background: #dc3545;
+      padding: 5px 8px;
+      border-radius: 3px;
+    }
+
+    .highlight {
+      background-color: #fff3cd !important;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Student Registration</h2>
+
+  <form id="studentForm">
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="number" id="age" placeholder="Age">
+    <input type="text" id="course" placeholder="Course">
+    <button type="submit">Add Student</button>
+  </form>
+
+  <div id="message"></div>
+
+  <h2>Student Dashboard</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Course</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="studentTable">
+      
+    </tbody>
+  </table>
+
+  <script>
+    const form = document.getElementById("studentForm");
+    const tableBody = document.getElementById("studentTable");
+    const messageDiv = document.getElementById("message");
+
+    
+    function showMessage(text, type) {
+      messageDiv.innerHTML = `
+        <div class="message ${type}">
+          ${text}
+        </div>
+      `;
+      setTimeout(() => messageDiv.innerHTML = "", 2000);
+    }
+
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const age = document.getElementById("age").value.trim();
+      const course = document.getElementById("course").value.trim();
+
+      if (!name || !age || !course) {
+        showMessage(`⚠️ Please fill in all fields`, "error");
+        return;
+      }
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${name}</td>
+        <td>${age}</td>
+        <td>${course}</td>
+        <td><button class="delete-btn">Delete</button></td>
+      `;
+
+      tableBody.appendChild(row);
+      showMessage(`✅ Student <strong>${name}</strong> added successfully`, "success");
+
+      form.reset();
+    });
+
+   
+    tableBody.addEventListener("click", e => {
+      const row = e.target.closest("tr");
+
+   
+      if (row) {
+        document.querySelectorAll("tr").forEach(tr => tr.classList.remove("highlight"));
+        row.classList.add("highlight");
+      }
+
+     
+      if (e.target.classList.contains("delete-btn")) {
+        const studentName = row.children[0].textContent;
+        row.remove();
+        showMessage(`🗑️ Student <strong>${studentName}</strong> deleted`, "success");
+      }
+    });
+  </script>
+
+</body>
+</html>
